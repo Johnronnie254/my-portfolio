@@ -1,9 +1,19 @@
-body{
+/* General Styles */
+body {
     background-color: black;
     color: white;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
-.greeting .name .career{
+
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+.greeting, .name, .career {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -11,66 +21,65 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
 }
-h1{
-    text-align: center;
+
+h1 {
     font-size: 90px;
     margin-bottom: 30px;
     margin-top: 150px;
+    text-align: center;
 }
 
-p{
-    text-align: center;
-    font-size: 90px;
-    margin-bottom: 30px;
-    margin-top: 30px; 
-    text-decoration: overline;
-}
-h2{
-    text-align: center;
+h2 {
     font-size: 40px;
     margin-bottom: 15px;
     margin-top: 35px;
     text-decoration: overline;
-}
-.icons{
     text-align: center;
-    margin-top: 100px;
 }
+
+p {
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-decoration: overline;
+    text-align: center;
+}
+
+.icons {
+    text-align: center;
+    margin-top: 50px;
+}
+
 .icons i {
     border: 2px solid white; 
     padding: 20px; 
     font-size: 24px; 
     border-radius: 50%;
 }
-@media only screen and (min-width: 768px) {
-    body {
-      font-size: 18px;
-    }
-  }
 
- .button{
+.button {
+    display: flex;
     justify-content: center;
-    text-align: center;
     align-items: center;
     margin-top: 40px;
     font-size: 30px;
     border-radius: 5px;
- }
- .pages{
+    text-align: center;
+}
+
+.pages {
     width: 100%;
     height: 100%;
     background-color: black;
- }
- .page-visible {
-    display: block; 
 }
+
 .page {
-    display: none; /* Initially hide all pages */
+    display: none;
 }
 
 .page.page-visible {
-    display: block; /* Display the page when it has the 'page-visible' class */
-    animation: slide-in 0.5s ease; /* Add a slide-in animation */
+    display: block;
+    animation: slide-in 0.5s ease;
 }
 
 @keyframes slide-in {
@@ -82,3 +91,48 @@ h2{
     }
 }
 
+.details, .school {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f5f5dc; /* Light Beige or Taupe */
+}
+
+.details p, .school p {
+    font-size: 18px;
+    color: black; /* Text color */
+    text-decoration: none;
+    text-align: justify;
+    
+}
+
+.school h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bio h1 {
+    font-size: 35px;
+    text-align: center;
+    text-decoration: double;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
